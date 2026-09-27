@@ -56,7 +56,7 @@ nav, section, section, .sectionCard, aside, .announcement, .trending
 
 body
 {
-    --sectionBackgroundColor: #ced4da;
+    --sectionBackgroundColor: #d6e0ea;
     font-family: Roboto;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -87,6 +87,7 @@ nav
     align-items: center;
     color: white;
     font-size: 25px;
+    padding-top: 10px;
     padding-left: 20px;
     gap: 15px;
 }
@@ -132,7 +133,9 @@ header
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 65% 35%;
-    padding: 10px 50px 10px 50px;
+    padding: 0 50px 10px 50px;
+    box-shadow: 0px 5px 5px #adb5bd;
+    z-index: 1;
 }
 
 .headerSearch, .headerProfile, .headerUserInfo, .headerButtons
@@ -141,12 +144,14 @@ header
     flex-grow: 0;
     gap: 20px;
     align-items: center;
-    border: lightgreen 1px solid;
 }
 
 #searchBar
 {
     width: 90%;
+    border-radius: 20px;
+    background-color: #dee2e6;
+    border: none;
 }
 
 .headerProfile
@@ -154,11 +159,37 @@ header
     gap: 50px;
     justify-content: end;
     padding-right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.headerProfile > img
+{
+    width: 70px;
+    height: 70px;
+}
+
+.headerUserInfoGreeting
+{
+    font-weight: bold;
+}
+
+.headerUserInfoName
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.headerUserInfo > img
+{
+    width: 90px;
+    height: 90px;
 }
 
 .headerButtons
 {
-    justify-content: space-between;
+    justify-content: end;
+    gap: 50px;
 }
 
 .headerButtons > button
@@ -180,7 +211,7 @@ section
 
     display: grid;
     grid-template-columns: 3fr 1fr;
-    padding-bottom: 50px;
+    padding-bottom: 5vh;
     background-color: var(--sectionBackgroundColor);
 }
 
@@ -194,7 +225,7 @@ section
     grid-column: 1 / 2;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: min-content min-content;
     padding: 30px 30px 0 30px;
     gap: 10px;
@@ -205,7 +236,7 @@ section
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, minmax(150px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
 .sectionCard
@@ -213,10 +244,26 @@ section
     height: fit-content;
     width: fit-content;
 
+    display: grid;
+    grid-template-rows: min-content 1fr 0.5fr;
     padding: 20px;
     background-color: white;
     border-left: orange 10px solid;
     border-radius: 10px;
+    box-shadow: 0px 5px 5px #adb5bd;
+}
+
+.sectionCard > p
+{
+    color: #6c757d;
+}
+
+.sectionCardActions
+{
+    display: flex;
+    gap: 35px;
+    justify-self: end;
+    padding: 30px 20px 10px 20px;
 }
 
 aside
@@ -238,12 +285,22 @@ aside
 .announcements
 {
     grid-row: 2 / 3;
+    
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .announcementsMessage
 {
     padding-bottom: 0px;
     border-bottom: 1px solid lightgray;
+}
+
+.announcementsMessage > p
+{
+    font-size: 14px;
+    color: #6c757d;
 }
 
 .announcementsMessage:last-of-type
@@ -254,16 +311,44 @@ aside
 #titleTrending
 {
     grid-row: 3 / 4;
+    
+    padding-top: 30px;
 }
 
 .trending
 {
     grid-row: 4 / 5;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trendingUser
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.trendingUserProject
+{
+    color: lightslategray;
+}
+
+.trendingUser > img
+{
+    width: 70px;
+    height: 70px;
 }
 .announcements, .trending
 {
-    padding: 10px 30px 10px 30px;
+    padding: 20px 30px 20px 30px;
     background-color: white;
+    box-shadow: 0px 5px 5px #adb5bd;
 }
+
+
 
 
