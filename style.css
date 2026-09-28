@@ -87,7 +87,7 @@ nav
     align-items: center;
     color: white;
     font-size: 25px;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-left: 20px;
     gap: 15px;
 }
@@ -243,6 +243,7 @@ section
 {
     height: fit-content;
     width: fit-content;
+    min-height: 300px;
 
     display: grid;
     grid-template-rows: min-content 1fr 0.5fr;
